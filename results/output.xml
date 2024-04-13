@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-13T11:43:16.618206" rpa="false" schemaversion="5">
+<suite id="s1" name="Dynamic Test" source="C:\Users\PraveenKumar\Desktop\Django\QuoDroidAssignment\tests\dynamic_test.robot">
+<test id="s1-t1" name="Open google.com" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-13T11:43:16.704720" elapsed="3.253769"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>url=https://google.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-13T11:43:19.959489" elapsed="1.819608"/>
+</kw>
+<status status="PASS" start="2024-04-13T11:43:16.703648" elapsed="5.076456"/>
+</test>
+<test id="s1-t2" name="Login with correct Username and Password" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-13T11:43:21.781677" elapsed="2.233590"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>url=https://the-internet.herokuapp.com/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-13T11:43:24.016546" elapsed="4.063705"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>username</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-13T11:43:28.081264" elapsed="0.096756"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>password</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-13T11:43:28.178020" elapsed="0.088688"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>class:radius</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-13T11:43:28.266708" elapsed="0.638866"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>id=flash</arg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-04-13T11:43:28.906575" elapsed="0.027218"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-13T11:43:28.935769" elapsed="0.646144"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-13T11:43:29.582931" elapsed="2.306103"/>
+</kw>
+<status status="PASS" start="2024-04-13T11:43:21.780668" elapsed="10.109327"/>
+</test>
+<status status="PASS" start="2024-04-13T11:43:16.620742" elapsed="15.271364"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Dynamic Test">Dynamic Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
