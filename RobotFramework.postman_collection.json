@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "05ea8a74-4dbe-4c4b-b962-a771f2e42f65",
+		"name": "RobotFramework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28419657"
+	},
+	"item": [
+		{
+			"name": "Open google.com",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tests\": [\r\n        {\r\n            \"title\": \"Open google.com\",\r\n            \"steps\": [\r\n                \"Open Browser    browser=chrome\",\r\n                \"Go To    url=https://google.com\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/testai/tests/v1/execute",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"testai",
+						"tests",
+						"v1",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiple test cases",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tests\": [\r\n        {\r\n            \"title\": \"Open google.com\",\r\n            \"steps\": [\r\n                \"Open Browser    browser=chrome\",\r\n                \"Go To    url=https://google.com\"\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"Login with correct Username and Password\",\r\n            \"steps\": [\r\n                \"Open Browser    browser=chrome\",\r\n                \"Go To    url=https://the-internet.herokuapp.com/login\",\r\n                \"Input Text    username    tomsmith\",\r\n                \"Input Text    password    SuperSecretPassword!\",\r\n                \"Click Button     class:radius\",\r\n                \"Element Should Contain    id=flash    You logged into a secure area!\",\r\n                \"Click Link    Logout\",\r\n                \"Close Browser\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/testai/tests/v1/execute",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"testai",
+						"tests",
+						"v1",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
